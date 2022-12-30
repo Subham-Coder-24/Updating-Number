@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>See!! i am changing<div id="num">0</div>
+        </h1>
+        <button onclick="set()">Click</button>
+        <button onclick="myStop()">Clear</button>
+
+    </div>
+    <script>
+        var myInterval;
+        function set() {
+            myInterval=setInterval(fun, 1000);
+        }
+        var i = 0;
+        function fun() {
+            i=i+1;
+            document.getElementById("num").innerHTML = i;
+        }
+        function myStop() {
+            clearInterval(myInterval);
+            i=0;
+            document.getElementById("num").innerHTML = i;
+        }
+    </script>
+
+</body>
+
+</html>
